@@ -761,7 +761,7 @@ class Html
      * @param string $attribute
      * @return string
      */
-    protected static function resolveName($model, &$attribute)
+    public static function resolveName($model, &$attribute)
     {
         $fn = get_class($model);
         $className = substr($fn, strrpos($fn, '\\') + 1);
@@ -810,7 +810,7 @@ class Html
      * @param string $attribute attribute name
      * @return mixed attribute value
      */
-    static protected function resolveValue($model, $attribute)
+    static public function resolveValue($model, $attribute)
     {
         if (false !== ($pos = strpos($attribute, '['))) {
             if (0 === $pos) { // [a]name[b][c], should ignore [a]
