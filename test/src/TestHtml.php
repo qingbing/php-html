@@ -8,9 +8,9 @@
 
 namespace Test;
 
+use DBootstrap\Abstracts\Tester;
 use Html;
 use TestClass\TestModel;
-use TestCore\Tester;
 
 class TestHtml extends Tester
 {
